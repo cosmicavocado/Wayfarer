@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CITIES } from './cities/cities';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wayfarer';
+  cities = CITIES
 }
