@@ -5,9 +5,14 @@
 </section>
 <section>
     <h2>Posts</h2>
-    <div *ngFor="let post of posts">
-        <a routerLink="/cities/{{city.id}}/posts/{{post.id}}"><h3>{{post.title}}</h3></a>
-        <p>{{post.date}}</p>
-        <p>{{post.body}}</p>
-    </div>
+    <ng-container *ngIf="posts.length > 0; else noPosts">
+        <div *ngFor="let post of posts">
+            <a routerLink="/cities/{{city.id}}/posts/{{post.id}}"><h3>{{post.title}}</h3></a>
+            <p>{{post.date}}</p>
+            <p>{{post.body}}</p>
+        </div>
+    </ng-container>
+    <ng-template #noPosts>
+        No posts to display. Create one!
+    </ng-template>
 </section>
