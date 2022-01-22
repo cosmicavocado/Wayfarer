@@ -1,3 +1,13 @@
-<h2>City: {{city.name}}</h2>
-<h4>Country: {{city.country}}</h4>
-<img src="{{city.image}}">
+<section>
+    <h2>City: {{city.name}}</h2>
+    <h4>Country: {{city.country}}</h4>
+    <img src="{{city.image}}">
+</section>
+<section>
+    <h2>Posts</h2>
+    <div *ngFor="let post of posts">
+        <a routerLink="/cities/{{city.id}}/posts/{{post.id}}"><h3>{{post.title}}</h3></a>
+        <p>{{post.date}}</p>
+        <p>{{post.body}}</p>
+    </div>
+</section>

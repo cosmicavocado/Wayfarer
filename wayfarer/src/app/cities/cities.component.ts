@@ -10,6 +10,7 @@ import { CITIES } from './cities';
 export class CitiesComponent implements OnInit {
 
   city: any;
+  posts: any;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -20,6 +21,8 @@ export class CitiesComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
+      this.posts = this.city.posts || [];
+      // sort posts by date
     })
   }
 
