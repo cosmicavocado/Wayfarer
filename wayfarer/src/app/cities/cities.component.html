@@ -1,0 +1,20 @@
+<div id="container">
+    <section id="info">
+        <h2>City: {{city.name}}</h2>
+        <h4>Country: {{city.country}}</h4>
+        <img src="{{city.image}}">
+    </section>
+    <section id="posts">
+        <h2>Posts</h2>
+        <ng-container *ngIf="posts.length > 0; else noPosts">
+            <div *ngFor="let post of posts">
+                <a routerLink="/cities/{{city.id}}/posts/{{post.id}}"><h3>{{post.title}}</h3></a>
+                <p>{{post.author}} - {{post.date}}</p>
+                <p>{{post.body}}</p>
+            </div>
+        </ng-container>
+        <ng-template #noPosts>
+            No posts to display. Create one!
+        </ng-template>
+    </section>
+</div>

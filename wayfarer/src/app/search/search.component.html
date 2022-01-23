@@ -1,0 +1,16 @@
+<input type="text" placeholder="Search for a post..." [(ngModel)]="searchText" (keyup.enter)="searchPosts(searchText)">
+<input type="submit" value="Search" (click)=searchPosts(searchText)>
+
+<section *ngIf="matches.length > 0">
+    <h2>Results</h2>
+    <ng-container *ngIf="matches.length > 0; else noPosts">
+        <div *ngFor="let match of matches; let i = index">
+            <a routerLink="/cities/{{cityIds[i]}}/posts/{{match.id}}"><h3>{{match.title}}</h3></a>
+            <p>{{match.author}} - {{match.date}}</p>
+            <p>{{match.body}}</p>
+        </div>
+    </ng-container>
+    <ng-template #noPosts>
+        No posts to match your search.
+    </ng-template>
+</section>

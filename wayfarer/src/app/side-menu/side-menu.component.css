@@ -1,0 +1,46 @@
+#menu{
+    margin: 0;
+    display: inline-block;
+    height: 83%;
+    max-width: 200px;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+    position: relative;
+    /* transition: 0.5s; */
+}
+
+#menu a {
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    line-height: 40px;
+    /* transition: 0.3s; */
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    color: #818181;
+}
+/*  
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#close::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '\d7';
+    font-size: 28px; 
+    color: navajowhite;
+    text-align: center;
+} */
