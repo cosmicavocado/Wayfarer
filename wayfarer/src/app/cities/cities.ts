@@ -54,7 +54,7 @@ export const CITIES = [
                 date: "1/8/22",
                 author: "Eric Brown",
                 title: "Monkey Business Confirmed in Gibraltar",
-                body: "I just visited Gibraltar and it was more fun than a barrel of monkies! Truly it was bananas."
+                body: "I just visited Gibraltar and it was more fun than a barrel of monkies! It was bananas."
             },
             {
                 id: 2,
