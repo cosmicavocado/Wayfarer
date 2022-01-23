@@ -17,6 +17,7 @@ export class CitiesComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap
     .subscribe(params => {
+      // get city
       this.city = CITIES.find(city => {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
@@ -29,10 +30,7 @@ export class CitiesComponent implements OnInit {
         b = b.date.split('/').reverse().join('');
         return a.localeCompare(b);
       })
-      console.log(this.posts);
     })
-    console.log(this.posts);
-    
   }
 
 }
