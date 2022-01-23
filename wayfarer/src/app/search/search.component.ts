@@ -8,6 +8,8 @@ import { CITIES } from '../cities/cities'
 })
 export class SearchComponent implements OnInit {
   searchText: string = '';
+  matches: any = [];
+  cityIds: any = [];
 
   constructor() { }
 
@@ -15,27 +17,25 @@ export class SearchComponent implements OnInit {
   }
 
   searchPosts(searchText: string): void {
-
-
+    // reset matches
+    this.matches = [];
+    // prevent empty string search
     if (searchText !== '') {
-      // get searchText
+      // convert searchText to regex
       let searchExp = new RegExp(searchText, 'i');
-      // search cities
+      // search cities and posts for matching search text
       CITIES.forEach(city => {
         city.posts.forEach(post => {
           let matchTitle = post.title.match(searchExp);
           let matchPost = post.body.match(searchExp);
-
-          // Log results
+          // Push results
           if (matchTitle !== null || matchPost !== null) {
-            console.log(matchTitle);
-            console.log(matchPost);
+            this.cityIds.push(city.id);
+            this.matches.push(post);
           }
         })
       })
-      
     }
-    
   }
 
 }
