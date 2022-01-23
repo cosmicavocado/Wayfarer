@@ -9,15 +9,15 @@ export const CITIES = [
                 id: 1,
                 date: "1/21/22",
                 author: "Mariah Legg",
-                title: "Golden Gate",
-                body: "Look at that ding-dang bridge! The suspension is killing me."
+                title: "A Bridge Too Far",
+                body: "Look at that ding-dang bridge! The view is absolutely riveting; it steels my heart every time! I can't wait to visit again – the suspension is killing me! 😭"
             },
             {
                 id: 2,
                 date: "8/30/21",
                 author: "Eric Brown",
                 title: "I’m a San Fan-cisco",
-                body: "I hate to say good bay to San Francisco but I'm trying to quit gold-turkey."
+                body: "I hate to say good bay to San Francisco but I'm trying to quit gold-turkey. She will be mist."
             }
         ]
     },
@@ -38,7 +38,7 @@ export const CITIES = [
                 id: 2,
                 date: "11/21/21",
                 author: "Eric Brown",
-                title: "Spent Big Benjamins to See Big Ben",
+                title: "All Tock, No Action",
                 body: "Is it safe to say the people who work near Big Ben are...working around the clock?"
             }
         ]
