@@ -1,0 +1,10 @@
+<h2>Create Post: {{city.name}}</h2>
+<form action="" id="createPost">
+    <label for="title">Title:</label><br>
+    <input name="title" type="text" [(ngModel)]="title"><br>
+    <label for="author">Author:</label><br>
+    <input name="author" type="text" [(ngModel)]="author"><br>
+    <label for="body">Post Text:</label><br>
+    <textarea name="body" form="createPost" [(ngModel)]="body"></textarea><br>
+    <input type="submit" value="Submit" (click)=createPost(title,author,body)>
+</form>

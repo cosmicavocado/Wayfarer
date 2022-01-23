@@ -2,7 +2,7 @@
 <input type="submit" value="Search" (click)=searchPosts(searchText)>
 
 <section *ngIf="matches.length > 0">
-    <h2>Posts</h2>
+    <h2>Results</h2>
     <ng-container *ngIf="matches.length > 0; else noPosts">
         <div *ngFor="let match of matches; let i = index">
             <a routerLink="/cities/{{cityIds[i]}}/posts/{{match.id}}"><h3>{{match.title}}</h3></a>

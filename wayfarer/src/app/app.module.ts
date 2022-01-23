@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { CitiesComponent } from './cities/cities.component';
 import { PostsComponent } from './posts/posts.component';
 import { SearchComponent } from './search/search.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
@@ -18,8 +19,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     CitiesComponent,
     PostsComponent,
     SearchComponent,
+    CreatePostComponent,
     SideMenuComponent
-
   ],
   imports: [
     BrowserModule,
