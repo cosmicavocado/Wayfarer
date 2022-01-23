@@ -21,9 +21,18 @@ export class CitiesComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
+      // store posts array
       this.posts = this.city.posts || [];
       // sort posts by date
+      this.posts = this.posts.sort((a: any, b: any) => {
+        a = a.date.split('/').reverse().join('');
+        b = b.date.split('/').reverse().join('');
+        return a.localeCompare(b);
+      })
+      console.log(this.posts);
     })
+    console.log(this.posts);
+    
   }
 
 }
