@@ -22,7 +22,7 @@ export class CitiesComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
-      // store posts array
+      // get posts array
       this.posts = this.city.posts || [];
       // sort posts by date
       this.posts = this.posts.sort((a: any, b: any) => {
