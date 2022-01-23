@@ -1,4 +1,4 @@
-<input type="text" placeholder="Search for a post..." [(ngModel)]="searchText">
+<input type="text" placeholder="Search for a post..." [(ngModel)]="searchText" (keyup.enter)="searchPosts(searchText)">
 <input type="submit" value="Search" (click)=searchPosts(searchText)>
 
 <section *ngIf="matches.length > 0">
