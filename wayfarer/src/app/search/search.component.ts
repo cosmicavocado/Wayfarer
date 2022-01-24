@@ -9,16 +9,9 @@ import { SearchService } from '../services/search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  @Input() searchText: string = '';
+  searchText: string = '';
   matches: any = [];
   cityIds: any = [];
-
-  @Input() getMatches() {
-    return this.matches;
-  }
-  @Input() getCityIds() {
-    return this.cityIds;
-  }
 
   constructor(private router: Router, private searchService: SearchService) { 
   }

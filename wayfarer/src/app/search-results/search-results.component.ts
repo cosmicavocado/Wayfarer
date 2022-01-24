@@ -14,23 +14,20 @@ export class SearchResultsComponent implements OnInit {
   searchText: string = '';
 
   constructor(private router: Router, private searchService: SearchService) {
-    this.searchText = searchService.getSearchText();
-    console.log("Search results " + this.searchText);
-    this.searchPosts(this.searchText);
-   }
+  }
 
   ngOnInit(): void {
-    // this.searchText = this.searchService.getSearchText();
-    // console.log("Search results " + this.searchText);
-    // this.searchPosts(this.searchText);
+    // listen for change in url
+    this.searchText = this.searchService.getSearchText();
+    console.log("Search results " + this.searchText);
+    this.searchPosts(this.searchText);
+
+    
   }
 
   searchPosts(searchText: string): void {
     this.searchService.setSearchText(searchText);
     console.log("Search component " + searchText);
-    // reset matches
-    this.matches = [];
-    this.cityIds = [];
 
     // convert searchText to regex
     let searchExp = new RegExp(searchText, 'i');
