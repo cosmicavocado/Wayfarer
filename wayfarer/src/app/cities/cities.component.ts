@@ -28,7 +28,7 @@ export class CitiesComponent implements OnInit {
       this.posts = this.posts.sort((a: any, b: any) => {
         a = a.date.split('/').reverse().join('');
         b = b.date.split('/').reverse().join('');
-        return b - a;
+        return b.localeCompare(a);
       })
     })
   }
