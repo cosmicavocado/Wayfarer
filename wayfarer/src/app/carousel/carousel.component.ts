@@ -9,12 +9,13 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 })
 export class CarouselComponent implements OnInit {
 
-  showNavigationArrows = true;
-  showNavigationIndicators = true;
   path: string = '../../assets/images/';
   images = [`${this.path}/gibraltar-monkey.png`, `${this.path}/golden-gate.png`, `${this.path}/london-eye.png`];
 
-  constructor() {}
+  constructor(config: NgbCarouselConfig) {
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = false;
+  }
 
   ngOnInit(): void {
   }
