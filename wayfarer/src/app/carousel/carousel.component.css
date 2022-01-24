@@ -1,0 +1,12 @@
+.wrapper {
+    width: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 100px 230px;
+}
+
+img {
+    height: 600px;
+    width: auto;
+}

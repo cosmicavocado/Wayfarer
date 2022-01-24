@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="images" class="wrapper">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="img-wrapper">
+        <img [src]="image" alt="image slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Iconic Locations</h3>
+        <p>Wayfarer IS travel. 🌴✈🧳</p>
+      </div>
+    </ng-template>
+</ngb-carousel>

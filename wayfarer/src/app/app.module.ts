@@ -11,6 +11,8 @@ import { PostsComponent } from './posts/posts.component';
 import { SearchComponent } from './search/search.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -21,13 +23,15 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     PostsComponent,
     SearchComponent,
     CreatePostComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
