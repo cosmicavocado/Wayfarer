@@ -1,9 +1,4 @@
-<div class="search">
-    <input type="text" placeholder="Search for a post..." [(ngModel)]="searchText" (keyup.enter)="searchPosts(searchText)">
-    <input type="submit" value="Search" (click)=searchPosts(searchText)>    
-</div>
-
-<!-- <section *ngIf="matches.length > 0">
+<section *ngIf="matches.length > 0">
     <h2>Results</h2>
     <ng-container *ngIf="matches.length > 0; else noPosts">
         <div *ngFor="let match of matches; let i = index">
@@ -15,4 +10,4 @@
     <ng-template #noPosts>
         No posts to match your search.
     </ng-template>
-</section> -->
+</section>
