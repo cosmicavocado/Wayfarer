@@ -1,8 +1,23 @@
 #container {
-    display: inline-block;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    position: relative;
+    top: 100px;
+    margin-left: 20%;
+    padding: 20px 40px;
+}
+
+#info {
+    display: block;
+}
+
+#posts {
+    display: block;
+    max-width: 400px;
+    padding: 25px;
 }
 
 img {
-    width: 400px
+    width: 400px;
 }
