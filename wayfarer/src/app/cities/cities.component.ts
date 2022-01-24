@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { CITIES } from './cities';
@@ -15,7 +14,6 @@ export class CitiesComponent implements OnInit {
   city: any;
   posts: any;
   weather: any;
-  subject = new Subject();
   key: string = 'ea0ac3979e7ffe0003ba30e895aea3b5';
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
