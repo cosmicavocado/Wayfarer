@@ -1,12 +1,12 @@
 #menu{
     margin: 0;
-    display: inline-block;
-    height: 83%;
-    max-width: 200px;
+    height: 130%;
+    width: 200px;
     background-color: black;
-    overflow-x: hidden;
     padding-top: 20px;
-    position: relative;
+    position: absolute;
+    top: 114.4px;
+    left: 0;
     /* transition: 0.5s; */
 }
 
@@ -16,6 +16,7 @@
     font-size: 25px;
     color: white;
     line-height: 40px;
+    width: 200px;
     /* transition: 0.3s; */
 }
 
