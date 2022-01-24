@@ -1,12 +1,13 @@
 #menu{
     margin: 0;
-    display: inline-block;
-    height: 83%;
-    max-width: 200px;
+    height: 100%;
+    width: 200px;
     background-color: black;
-    overflow-x: hidden;
     padding-top: 20px;
-    position: relative;
+    position: absolute;
+    top: 114.4px;
+    left: 0;
+    overflow: hidden;
     /* transition: 0.5s; */
 }
 
