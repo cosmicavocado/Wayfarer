@@ -30,6 +30,7 @@ export class SearchResultsComponent implements OnInit {
     console.log("Search component " + searchText);
     // reset matches
     this.matches = [];
+    this.cityIds = [];
 
     // convert searchText to regex
     let searchExp = new RegExp(searchText, 'i');
@@ -45,10 +46,7 @@ export class SearchResultsComponent implements OnInit {
         }
       })
     })
-    this.router.navigateByUrl('/search');
-    this.searchText = '';
-    // this.window.reload();
-    // this.router.navigate([this.router.url])
+    this.router.navigateByUrl(`/search/${searchText}`);
   }
 
 }

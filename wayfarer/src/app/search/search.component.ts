@@ -21,7 +21,6 @@ export class SearchComponent implements OnInit {
   }
 
   constructor(private router: Router, private searchService: SearchService) { 
-    // this.searchService.getSearchText();
   }
 
   ngOnInit(): void {
@@ -33,28 +32,8 @@ export class SearchComponent implements OnInit {
       this.searchService.setSearchText(searchText);
       console.log("Search component " + searchText);
       console.log("Search service " + this.searchService.getSearchText());
-      this.router.navigateByUrl('/search');
+      this.router.navigateByUrl(`/search/${searchText}`);
     }
-  //   // reset matches
-  //   this.matches = [];
-  //   // prevent empty string search
-  //   if (searchText !== '') {
-  //     // convert searchText to regex
-  //     let searchExp = new RegExp(searchText, 'i');
-  //     // search cities and posts for matching search text
-  //     CITIES.forEach(city => {
-  //       city.posts.forEach(post => {
-  //         let matchTitle = post.title.match(searchExp);
-  //         let matchPost = post.body.match(searchExp);
-  //         // Push results
-  //         if (matchTitle !== null || matchPost !== null) {
-  //           this.cityIds.push(city.id);
-  //           this.matches.push(post);
-  //         }
-  //       })
-  //     })
-      // this.router.navigateByUrl('/search');
-  //   }
   }
 
 }
