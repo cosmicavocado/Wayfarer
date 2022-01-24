@@ -13,12 +13,8 @@ export class CarouselComponent implements OnInit {
   showNavigationIndicators = true;
   path: string = '../../assets/images/';
   images = [`${this.path}/gibraltar-monkey.png`, `${this.path}/golden-gate.png`, `${this.path}/london-eye.png`];
-  // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  constructor(config: NgbCarouselConfig) { 
-    // config.showNavigationArrows = true;
-    // config.showNavigationIndicators = true;
-  }
+  constructor() {}
 
   ngOnInit(): void {
   }
