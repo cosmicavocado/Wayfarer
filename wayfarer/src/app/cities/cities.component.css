@@ -1,6 +1,4 @@
 #container {
-    display: flex;
-    justify-content: center;
     width: 75%;
     position: relative;
     top: 100px;
@@ -9,15 +7,17 @@
 }
 
 #info {
-    display: block;
+    display: inline;
+    max-width: 20%;
 }
 
 #posts {
-    display: block;
     max-width: 400px;
-    padding: 25px;
 }
 
 img {
+    /* position: absolute;
+    float: right;
+    top: 0; */
     width: 400px;
 }
