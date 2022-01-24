@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 import { CITIES } from './cities';
 
 @Component({
@@ -11,8 +13,10 @@ export class CitiesComponent implements OnInit {
 
   city: any;
   posts: any;
+  weather: any;
+  key: string = 'ea0ac3979e7ffe0003ba30e895aea3b5';
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.route.paramMap
@@ -30,7 +34,13 @@ export class CitiesComponent implements OnInit {
         b = b.date.split('/').reverse().join('');
         return b.localeCompare(a);
       })
+      this.weather = this.getWeather(this.city.name);
     })
   }
 
+    getWeather(name: string) {
+    this.http.get(
+      `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${this.key}&&units=metric`)
+    .subscribe((response: any) => this.weather = response);
+  }
 }
