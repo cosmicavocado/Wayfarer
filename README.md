@@ -32,5 +32,5 @@ Do you want an end product that uses the same tired templates? Or do you want a 
 
 - Michelle Lucero
 - Julio Wagner
-- Michael Chrogan
+- Michael Croghan
 - Corbett McGuire
