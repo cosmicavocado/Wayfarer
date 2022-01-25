@@ -1,4 +1,6 @@
 div {
+    position: absolute;
+    width: 100%;
     background-color: skyblue;
     padding: 1px;
     margin: 0;
