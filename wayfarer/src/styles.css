@@ -4,6 +4,8 @@ html {
 }
 
 body {
+    background-color: rgb(231, 223, 198);
     margin: 0;
     height: 100%;   
+    font-family: 'Roboto', sans-serif;
 }

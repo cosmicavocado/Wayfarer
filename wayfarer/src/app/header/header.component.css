@@ -2,17 +2,27 @@ div {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: skyblue;
+    background-color: rgb(41, 112, 69);
     padding: 1px;
     margin: 0;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 40.12px;
     margin-left: 20px;
+    font-family: 'Asap', sans-serif;
 }
 
+/* #logo {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    align-self: center;
+    justify-self: center;
+} */
+
 a:link, a:visited {
-    color: black;
+    color: rgb(114, 161, 229);
     text-decoration: none;
+    /* -webkit-text-stroke: 0.3px black; */
 }

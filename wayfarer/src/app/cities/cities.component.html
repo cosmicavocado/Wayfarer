@@ -1,17 +1,17 @@
 <div id="container">
     <section id="info">
-        <h2>City: {{city.name}}</h2>
-        <h4>Country: {{city.country}}</h4>
-        <p>{{weather.main.temp}} °C — {{(weather.main.temp * 1.8 + 32).toPrecision(4)}} °F ⛅</p>
+        <h2 id="name">City: {{city.name}}</h2>
+        <h4 id="country">Country: {{city.country}}</h4>
+        <p id="weather">{{weather.main.temp}} °C — {{(weather.main.temp * 1.8 + 32).toPrecision(4)}} °F ⛅</p>
         <img src="{{city.image}}">
     </section>
     <section id="posts">
-        <h2>Posts</h2>
+        <h2 id="post">Posts</h2>
         <ng-container *ngIf="posts.length > 0; else noPosts">
             <div *ngFor="let post of posts">
                 <a routerLink="/cities/{{city.id}}/posts/{{post.id}}"><h3>{{post.title}}</h3></a>
-                <p>{{post.author}} - {{post.date}}</p>
-                <p>{{post.body}}</p>
+                <p id="author">{{post.author}} - {{post.date}}</p>
+                <p id="body">{{post.body}}</p>
             </div>
         </ng-container>
         <ng-template #noPosts>

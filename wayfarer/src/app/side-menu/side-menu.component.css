@@ -1,26 +1,37 @@
 #menu {
     margin: 0;
     height: 130%;
-    width: 400px;
-    background-color: black;
+    width: 325px;
+    background-color: rgb(95, 72, 66);
     padding-top: 20px;
     position: absolute;
     top: 114.4px;
     left: 0;
-    /* transition: 0.5s; */
 }
 
-#menu a {
-    padding: 10px 20px;
+ul {
+    margin: 0;
+    padding: 0
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(231, 223, 198);
+    border-color: silver;
+    width: 80%;
+    margin: 15px auto;
+    padding: 4px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 40px;
-    color: white;
-    line-height: 40px;
-    width: 200px;
-    border-color:#818181;
-    /* transition: 0.3s; */
+    font-size: 31px;
+    color: rgb(116, 94, 86);
+    line-height: 43px;
 }
 
-#menu a:hover {
-    color: #818181;
+button:hover {
+    color: rgb(136, 111, 101);
+    background-color: rgba(231, 223, 198, 0.85);
+    cursor: pointer;
 }

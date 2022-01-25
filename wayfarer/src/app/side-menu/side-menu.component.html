@@ -2,7 +2,7 @@
     <!-- <div id="close"></div> -->
     <ul>
         <li *ngFor="let city of cities" class="btn">
-            <button><a routerLink="/cities/{{city.id}}">{{city.name}}</a></button>
+            <button routerLink="/cities/{{city.id}}">{{city.name}}</button>
         </li>
     </ul>
 </div>
