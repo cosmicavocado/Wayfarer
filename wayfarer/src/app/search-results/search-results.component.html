@@ -1,10 +1,10 @@
 <section *ngIf="matches.length > 0">
-    <h2>Results</h2>
+    <h2 id="result">Results</h2>
     <ng-container *ngIf="matches.length > 0; else noPosts">
         <div *ngFor="let match of matches; let i = index">
-            <a routerLink="/cities/{{cityIds[i]}}/posts/{{match.id}}"><h3>{{match.title}}</h3></a>
-            <p>{{match.author}} - {{match.date}}</p>
-            <p>{{match.body}}</p>
+            <a routerLink="/cities/{{cityIds[i]}}/posts/{{match.id}}"><h3 id="post">{{match.title}}</h3></a>
+            <p id="author">{{match.author}} - {{match.date}}</p>
+            <p id="body">{{match.body}}</p>
         </div>
     </ng-container>
     <ng-template #noPosts>
