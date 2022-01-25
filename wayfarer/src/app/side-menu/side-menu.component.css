@@ -1,7 +1,7 @@
-#menu{
+#menu {
     margin: 0;
     height: 130%;
-    width: 200px;
+    width: 400px;
     background-color: black;
     padding-top: 20px;
     position: absolute;
@@ -11,21 +11,25 @@
 }
 
 #menu a {
-    padding: 5px 20px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 40px;
     color: white;
     line-height: 40px;
     width: 200px;
+    border-color:#818181;
     /* transition: 0.3s; */
 }
 
 #menu a:hover {
-    text-decoration: underline;
     color: #818181;
 }
-/*  
-#close {
+
+#menu a:active {
+    background-color: blue;
+}
+ 
+/* #close {
     position: absolute;
     top: 0;
     right: 0;
