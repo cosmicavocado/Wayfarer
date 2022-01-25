@@ -1,6 +1,7 @@
 .carousel {
-    margin-left: 400px;
-    margin-top: 100px;
+    /* margin-left: 400px; */
+    top: 50px;
+    left: 175px;
 }
 
 .page-text {

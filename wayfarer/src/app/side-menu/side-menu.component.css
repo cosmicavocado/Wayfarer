@@ -20,9 +20,9 @@ button {
     justify-content: center;
     background-color: rgb(231, 223, 198);
     border-color: silver;
-    width: 80%;
+    width: 100%;
     margin: 15px auto;
-    padding: 4px;
+    padding: 12px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 31px;

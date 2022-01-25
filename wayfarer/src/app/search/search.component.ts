@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   matches: any = [];
   cityIds: any = [];
 
-  constructor(private router: Router, private searchService: SearchService) { 
+  constructor(private router: Router, private searchService: SearchService, public _router: Router) { 
   }
 
   ngOnInit(): void {
