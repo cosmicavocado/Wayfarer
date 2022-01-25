@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router'
 import { CITIES } from '../cities/cities';
-import { SearchService } from '../services/search.service';
 
 @Component({
   selector: 'app-search-results',
@@ -13,21 +13,21 @@ export class SearchResultsComponent implements OnInit {
   cityIds: any = [];
   searchText: string = '';
 
-  constructor(private router: Router, private searchService: SearchService) {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     // listen for change in url
-    this.searchText = this.searchService.getSearchText();
-    console.log("Search results " + this.searchText);
-    this.searchPosts(this.searchText);
-
-    
+    this.route.paramMap.subscribe(params => {
+      this.searchText = params.get('searchText') || '';
+      return this.searchPosts(this.searchText);
+    })
   }
 
   searchPosts(searchText: string): void {
-    this.searchService.setSearchText(searchText);
-    console.log("Search component " + searchText);
+    // reset results
+    this.matches = [];
+    this.cityIds = [];
 
     // convert searchText to regex
     let searchExp = new RegExp(searchText, 'i');

@@ -20,7 +20,7 @@ const routes: Routes = [
     component: CreatePostComponent
   },
   {
-    path: 'search/:query',
+    path: 'search/:searchText',
     component: SearchResultsComponent
   }
 ];
