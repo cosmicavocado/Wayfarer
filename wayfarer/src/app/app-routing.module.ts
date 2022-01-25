@@ -5,8 +5,13 @@ import { CitiesComponent } from './cities/cities.component';
 import { PostsComponent } from './posts/posts.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { SplashComponent } from './splash/splash.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: SplashComponent
+  },
   {
     path: 'cities/:id',
     component: CitiesComponent

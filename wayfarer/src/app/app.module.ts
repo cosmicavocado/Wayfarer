@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { SplashComponent } from './splash/splash.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -23,13 +26,16 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     SearchComponent,
     CreatePostComponent,
     SideMenuComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    SplashComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [SearchComponent, SearchResultsComponent],
   bootstrap: [AppComponent]
