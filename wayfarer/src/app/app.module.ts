@@ -11,6 +11,7 @@ import { PostsComponent } from './posts/posts.component';
 import { SearchComponent } from './search/search.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     PostsComponent,
     SearchComponent,
     CreatePostComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SearchComponent, SearchResultsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
